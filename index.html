@@ -1,11 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Generative AI Website</title>
+<style>
+/* ----------------- GLOBAL ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+  width: 100%;
+  padding: 18px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+header .logo {
+  color: #5579a2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+header nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+header nav a:hover {
+  opacity: 0.6;
+}
+
+
+
+
+
+/*  Hero Section */
+
+.hero {
+    position: relative;
+    margin-top: 60px;
+    height: 700px; 
+    background: url(Image/gen.\ AI.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+ 
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hero-buttons button {
+    padding: 12px 30px;
+    border: 2px solid white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.hero-buttons a {
+  padding: 12px 24px;
+  background: #386dff;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.hero-buttons a:nth-child(2) {
+  background: transparent;
+  border: 1px solid white;
+}
+
+
+/* ----------------- What is Generative AI ----------------- */
+.section {
+  max-width: 70%;
+  margin: 80px auto;
+  padding: 0 25px;
+}
+.section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.section p {
+  font-size: 15px;
+  text-align: justify;
+  max-width: 100%;
+  margin: auto;
+  color: #555;
+}
+
+/* ----------------- HISTORY ----------------- */
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 90px;
+}
+.history h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.timeline {
+  list-style: none;
+  padding-left: 20px;
+  border-left: 3px solid #246aba;
+}
+.timeline li {
+  margin-bottom: 25px;
+}
+.timeline li span {
+  display: block;
+  font-size: 14px;
+  color: #246aba;
+  font-weight: 600;
+}
+.timeline li p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #555;
+  max-width: 420px;
+  text-align: justify;
+}
+.history img {
+  width: 100%;
+ 
+  border-radius: 10px;
+}
+
+/* ----------------- FUTURE SECTION ----------------- */
+.future {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 100px;
+}
+.future h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  margin-top: 10%;
+}
+.future p {
+  font-size: 14px;
+  color: #555;
+  max-width: 500px;
+  margin-right: 10%;
+  text-align: justify;
+  
+}
+.future img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ----------------- APPLICATION CARDS ----------------- */
+.apps-section h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 40px;
+}
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.card {
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fafafa;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.card p {
+  font-size: 13px;
+  color: #555;
+}
+
+
+</style>
 </head>
 <body>
-  <h1>Work In Progress</h1>  
+
+<header>
+  <div class="logo"><span style="background-color:#5579a2;border-radius: 30%;">⚙️</span> Generative AI</div>
+  <nav>
+    <a href="#what is ai">What is Generative AI</a>
+    <a href="#history">History</a>
+    <a href="#future">Future</a>
+    <a href="#Applications">Applications</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+  <h1>Unlock the Power of<br>Generative AI</h1>
+  <p>Discover the future of innovation and creativity. Explore how generative AI is transforming industries and creating new possibilities.</p>
+  <div class="hero-buttons">
+    <a href="#Applications">Explore Applications</a>
+    <a href="#">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS GEN AI -->
+ <div id="what is ai">
+<section class="section">
+  <h2>What is Generative AI?</h2>
+  <p>
+
+
+Generative AI is a type of artificial intelligence that can create new and original content—such as text, images, music, video, code, and even 3D models—based on the patterns it learns from large amounts of data.
+Unlike traditional AI, which focuses on analyzing information and making predictions, generative AI is designed to produce something new.
+
+These models learn from examples, understand underlying structures, and then generate outputs that are coherent, creative, and human-like. This allows them to write stories, design graphics, compose music, build software, simulate environments, and assist humans across countless industries.
+</p>
+</br>
+<p><b>Key Features of Generative AI</b>
+</br>
+
+🔵 Creates original content rather than just classifying data
+</br>
+🔵 Learns from patterns in massive datasets
+</br>
+🔵 Generates text, images, audio, video, and more
+</br>
+🔵 Mimics human creativity and reasoning
+</br>
+🔵 Adapts and improves with more data and interaction</p>
+</br>
+<p><b>Why It Matters</b>
+  </br>
+
+Generative AI unlocks unprecedented innovation by enabling tools that can assist with creativity, automation, scientific discovery, education, and business development.
+It empowers anyone—from artists to engineers—to create high-quality content faster and more efficiently.
+  </p>
+</section>
+</div>
+
+<!-- HISTORY SECTION -->
+ <div id="history">
+<section class="section history">
+  <div>
+    <h3>A Brief History of Generative AI</h3>
+    <ul class="timeline">
+      <li>
+        <span>2014: GANs Introduced</span>
+        <p>Ian Goodfellow and colleagues introduce Generative Adversarial Networks.</p>
+      </li>
+      <li>
+        <span>2018: GPT-1</span>
+        <p>First large-scale transformer model establishes foundation for LLMs.</p>
+      </li>
+      <li>
+        <span>2021: DALL·E</span>
+        <p>Text-to-image models revolutionize visual content creation.</p>
+      </li>
+      <li>
+        <span>2022: ChatGPT Goes Public</span>
+        <p>Conversational AI becomes widely accessible and mainstream.</p>
+      </li>
+    </ul>
+  </div>
+  <img src="Image/history.png" />
+</section>
+</div>
+<!-- FUTURE SECTION -->
+ <div id="future">
+<section class="section future">
+  <div>
+    <h3>The Future of AI</h3>
+    <p>
+      The future of AI is defined by intelligent systems that not only understand the world, but also create, collaborate, and innovate alongside humans. From autonomous tools to fully personalized digital experiences, AI is evolving into a powerful partner that enhances creativity, productivity, and problem-solving at every level.
+    </p>
+  </div>
+  <img src="Image/future.png" />
+</section>
+</div>
+<!-- APPLICATION CARDS -->
+ <div id="Applications">
+<section class="section apps-section" id="apps">
+  <h2>Explore Applications</h2>
+  <div class="cards">
+    <div class="card"><h4>Image Synthesis</h4><p>Generate photorealistic images from text.</p></div>
+    <div class="card"><h4>Text Generation</h4><p>Create articles, emails, and content.</p></div>
+    <div class="card"><h4>Code Generation</h4><p>Write code, debug, and automate development.</p></div>
+    <div class="card"><h4>Music Composition</h4><p>Produce original melodies and compositions.</p></div>
+    <div class="card"><h4>Drug Discovery</h4><p>Accelerate molecular and medical research.</p></div>
+    <div class="card"><h4>Synthetic Data</h4><p>Generate anonymized training datasets.</p></div>
+  </div>
+</section>
+</div>
+
 </body>
 </html>
