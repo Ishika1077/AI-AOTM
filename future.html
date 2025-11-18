@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future of AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: #fafafa;
+      color: #111;
+    }
+    
+    header {
+  width: 100%;
+  padding: 18px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+header .logo {
+  color: #5579a2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+header nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+header nav a:hover {
+  opacity: 0.6;
+}
+
+
+    /* HERO */
+    .hero {
+      /*background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80');*/
+      background: url(Image/futureai.png);
+      background-size: cover;
+      background-position: center;
+      height:550px;
+      padding: 120px 40px;
+      text-align: center;
+      color: white;
+    }
+.hero::before {
+    content: '';
+    position: absolute;
+    height: 550px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0 0 20px;
+      margin-top: 70px;
+    }
+    .hero p {
+        position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: auto;
+      font-size: 14px;
+      opacity: .9;
+    }
+
+    /* INTRO */
+    .intro {
+      max-width: 1000px;
+      margin: 40px auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+      text-align: justify;
+    }
+    .intro h2{
+        color: black;
+        margin-bottom: 3px;
+        text-align: center;
+        font-size: 22px;
+        
+    }
+
+    /* KEY AREAS */
+    h2 {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+    .key-areas-desc {
+      text-align: center;
+      font-size: 14px;
+      max-width: 700px;
+      margin: auto;
+      color: #555;
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+    .three-cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      width: 260px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    .icon {
+      width: 36px;
+      height: 36px;
+      background: #eef0ff;
+      border-radius: 50%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      color: #2d4bff;
+    }
+    .card-title {
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    .card p{
+      margin-top: 6px;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* TIMELINE */
+    .timeline-section {
+      margin: 80px auto;
+      text-align: center;
+      max-width: 600px;
+    }
+    .timeline-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .timeline-desc {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .timeline-container {
+      border-left: 2px solid #d0d0ff;
+      margin-left: 40px;
+      padding-left: 30px;
+    }
+    .timeline-item {
+      margin-bottom: 50px;
+      position: relative;
+    }
+    .year {
+      position: absolute;
+      left: -52px;
+      top: 0;
+      background: #2d4bff;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .item-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.07);
+      font-size: 13px;
+      text-align: left;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="logo"><span style="background-color:#5579a2;border-radius: 30%;">⚙️</span> Generative AI</div>
+  <nav>
+    <a href="#what is ai">What is Generative AI</a>
+    <a href="#history">History</a>
+    <a href="#future">Future</a>
+    <a href="#Applications">Applications</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+  <section class="hero">
+    <h1>The Future of AI: Charting the Next Decade</h1>
+    <p>Explore the trajectory of artificial intelligence and its transformative impact on our world.</p>
+  </section>
+
+  <div class="intro">
+    <h2>Future of AI </h2>
+  <br/>
+    The future of AI promises a world where intelligent systems seamlessly enhance human capabilities, transforming how we work, create, and solve complex problems. As AI becomes more advanced, it will drive breakthroughs across industries—from healthcare and education to engineering and design—while enabling smarter automation and more personalized experiences. With responsible development and ethical governance, AI has the potential to elevate global productivity, unlock new innovations, and reshape society in profound and positive ways.
+  </div>
+
+  <h2>Key Areas of AI Evolution</h2>
+  <p class="key-areas-desc">Understand the multifaceted future of AI by exploring the core domains that will shape its development and integration into society.</p>
+
+  <div class="three-cards">
+    <div class="card">
+      <div class="icon">🔒</div>
+      <div class="card-title">Ethical Frontiers</div>
+      <p>Navigating the complexities of AI ethics, bias, and governance for responsible innovation.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <div class="card-title">Industry Transformation</div>
+      <p>How AI is set to revolutionize key sectors like healthcare, finance, and creative industries.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👥</div>
+      <div class="card-title">Societal Impact</div>
+      <p>The profound effects of AI on jobs, education, and the fabric of our daily lives.</p>
+    </div>
+  </div>
+
+  <section class="timeline-section">
+    <div class="timeline-title">AI Forecast: 2025-2040</div>
+    <p class="timeline-desc">A glimpse into the key predicted milestones and technological breakthroughs on the horizon for artificial intelligence.</p>
+
+    <div class="timeline-container">
+
+      <div class="timeline-item">
+        <div class="year">2028</div>
+        <div class="item-card">
+          <strong>Near-Human AGI</strong><br>
+          AI systems begin to demonstrate reasoning and problem-solving capabilities comparable to humans in specific domains.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2032</div>
+        <div class="item-card">
+          <strong>AI in Drug Discovery</strong><br>
+          AI significantly accelerates the discovery of new medicines, reducing development timelines by years.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2040</div>
+        <div class="item-card">
+          <strong>Global AI Governance</strong><br>
+          International treaties and frameworks are established to govern the ethical development and deployment of advanced AI.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+     
+</body>
+</html>
