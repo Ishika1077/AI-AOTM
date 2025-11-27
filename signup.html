@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e5d92b4;
+      color: #090909;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 800px;
+    }
+
+
+    
+/* ----------------- HEADER ----------------- */
+header {
+  width: 100%;
+  padding: 18px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+header .logo {
+  color: #090909;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+nav{
+margin-right: 120px;
+}
+
+
+header nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+header nav a:hover {
+  opacity: 0.6;
+}
+
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    /* Left Section */
+    .left-section {
+      flex: 1;
+      padding: 40px;
+      margin-top: 100px;
+    }
+
+    .left-section img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0px 10px 30px #64c7f5;
+    }
+
+    .headline {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .subtext {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #f4f6f9f8;
+    }
+
+    /* Right Section */
+    .right-section {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .social-btn {
+      background-color: #1e293b;
+      border: none;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      color: #f4f6f9f8;
+    }
+
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background-color: #1e293b;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .terms {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #f4f6f9f8;
+    }
+
+    .create-btn {
+      background-color: #2563eb;
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      color: #f4f6f9f8;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    
+
+    .right-section {
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    /* Hover lift buttons */
+    .social-btn:hover,
+    .create-btn:hover{
+      transform: translateY(-3px);
+      transition: 0.2s ease;
+      opacity: 0.9;
+    }
+
+    .social-btn,
+    .create-btn:hover {
+      transition: 0.25s ease;
+    }
+
+
+    
+   
+    
+</style>
+</head>
+<body>
+
+
+     <header>
+      
+  <div class="logo">Nexa AI</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#history">History</a>
+    <a href="future.html">Future</a>
+    <a href="features.html">Features</a>
+     <a href="#">Contact</a>
+    
+  </nav>
+</header>
+
+
+  <div class="container">
+
+    <!-- Left Section -->
+    <div class="left-section">
+      <img src="Image/AI.avif" alt="Generative Art" />
+      <div class="headline">The Future of Creation Starts Here.</div>
+      <div class="subtext">Join a new era of generative design and creativity.</div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+
+      <h1>Start Creating for Free</h1>
+      <p>Create your account to begin.</p>
+
+      <button class="social-btn">Sign up with Google</button>
+      <button class="social-btn">Sign up with Apple</button>
+
+      <div class="divider">OR</div>
+
+      <form>
+        <label>Email Address</label><br />
+        <input type="email" placeholder="you@example.com" />
+
+        <label>Password</label><br />
+        <input type="password" placeholder="Enter your password" />
+
+       
+
+        <div class="terms">
+          <input type="checkbox" /> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </div>
+
+        <button class="create-btn">Create Free Account</button>
+      </form>
+
+      <div class="login-link">Already have an account? <a href="#">Log In</a>
+    </div>
+    </div>
+  </div>
+
+ 
+     
+</body>
+</html>

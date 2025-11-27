@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexa AI – Features</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+ 
+  font-family: "Inter", sans-serif;
+}
+
+  /* Global Styles */
+body {
+   margin: 0;
+    background: #fcfcfd;
+    color: #030303;
+}
+
+a { text-decoration: none; }
+
+
+/* ----------------- HEADER ----------------- */
+header {
+  width: 100%;
+  padding: 18px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+header .logo {
+  color: #5579a2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+nav{
+margin-right: 120px;
+}
+header nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+header nav a:hover {
+  opacity: 0.6;
+}
+
+/* HERO */
+.hero {
+  height: 500px;
+    text-align: center;
+    padding: 120px 20px;
+    background: url(Image/machine.gif);
+    background-size: cover;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+  @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+ .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    margin: auto;
+    margin-top: 110px;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 17px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #cfcfcf;
+}
+
+.btn-primary {
+    padding: 10px 18px;
+    background: #3d73ff;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white ;
+}
+
+
+.hero .btn-primary {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+
+
+
+
+
+/* --- Feature Card --- */
+.section {
+  max-width: 70%;
+  margin: 80px auto;
+  padding: 0 25px;
+}
+.section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.section p {
+  font-size: 15px;
+  text-align: justify;
+  max-width: 100%;
+  margin: auto;
+  color: #555;
+}
+
+
+.app-card {
+
+padding: 22px;
+border-radius: 12px;
+background: #1b1f27;
+min-height: 160px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+cursor: pointer;
+}
+
+
+.app-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+background: rgba(60, 60, 61, 0.866);
+
+}
+
+
+.app-card h4 {
+font-size: 16px;
+font-weight: 600;
+color: #f3f4f5;
+}
+
+
+
+.app-card p {
+font-size: 13px;
+color: #bbbbbb;
+}
+
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 25px;
+margin-top: 40px;
+}
+
+
+.app-img {
+width: 300px;
+height: 200px;
+  object-fit: cover;
+margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 90px 20px;
+    background: #1b1f27;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.cta h2{
+    color: #fff;
+}
+
+.cta p {
+    max-width: 500px;
+    margin: 10px auto 25px;
+    color: #bbbbbb;
+}
+
+
+  .footer {
+    background: #0f172a;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 20px 0;
+  }
+
+  .footer-section p{
+    width: 200px;
+  }
+
+  .footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 8px 0;
+  }
+
+  .footer-section ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    color: #3b82f6;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #3b82f6;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+
+</style>
+<body>
+
+    <header>
+      
+  <div class="logo">Nexa AI</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="future.html">Future</a>
+     <a href="#footer">Contact</a>
+    
+  </nav>
+</header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+       <div class="hero-content">
+        <h1>Amplify Your Creativity with <br> Nexa AI</h1>
+        <p>Unlock unparalleled creative potential and streamline your workflow with our state-of-the-art generative AI.</p>
+        <a href="signup.html" class="btn-primary">Start Creating for Free</a>
+        </div>
+    </section>
+
+    
+
+    
+
+
+
+<!-- UPDATED APPLICATIONS SECTION -->
+<section class="section apps-section" id="applications">
+<h2>Explore Features</h2>
+
+
+<div class="cards">
+<div class="card app-card">
+
+<img src="Image/img gen..png" class="app-img" alt="AI Image" />
+<h4>Real‑Time Image Generation</h4>
+<p>Create high‑quality visuals instantly with AI‑powered prompting.</p>
+</div>
+
+
+<div class="card app-card">
+<img src="Image/smart write.png" class="app-img" alt="AI App" />
+<h4>Smart Content Writing</h4>
+<p>Produce blogs, scripts, emails, and creative stories effortlessly.</p>
+</div>
+
+
+<div class="card app-card">
+<img src="Image/gen. code.png" class="app-img" alt="AI App" />
+<h4>AI‑Assisted Coding</h4>
+<p>Generate, optimize, and debug code with intelligent suggestions.</p>
+</div>
+
+
+<div class="card app-card">
+<img src="Image/voice and audio.png" class="app-img" alt="AI App" />
+<h4>Voice & Audio Generation</h4>
+<p>Create natural‑sounding voices, music, and sound effects.</p>
+</div>
+
+
+<div class="card app-card">
+<img src="Image/bussines.png" class="app-img" alt="AI App" />
+<h4>Business Automation</h4>
+<p>Automate workflows, analysis, and decision‑making with precision.</p>
+</div>
+
+
+<div class="card app-card">
+<img src="Image/virtual sim..png" class="app-img" alt="AI App" />
+<h4>Virtual Simulations</h4>
+<p>Build digital worlds, training simulations, and prototypes.</p>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+        <h2>Ready to Build with Nexa?</h2>
+        <p>Join thousands of creators and developers pushing the boundaries of innovation.</p>
+        <a href="signup.html" class="btn-primary">Sign Up Now</a>
+    </section>
+
+   <!-- FOOTER -->
+    <div id="footer">
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-section">
+      <h3>GenAI Product</h3>
+      <p>Shaping the future of generative design and AI creativity.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="features.html">Features</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@genai.com">support@genai.com</a></li>
+        <li><a href="#">Live Chat</a></li>
+        <li><a href="#">Request a Demo</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+      </div>
+    </div>
+
+  </div>
+
+  
+</footer>
+     </div>
+</body>
+</html>

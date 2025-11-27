@@ -9,7 +9,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
   font-family: "Inter", sans-serif;
 }
 body {
@@ -40,6 +40,12 @@ header .logo {
   gap: 10px;
   font-size: 16px;
 }
+
+nav{
+margin-right: 120px;
+}
+
+
 header nav a {
   color: #fff;
   margin-left: 25px;
@@ -56,19 +62,20 @@ header nav a:hover {
 
 
 
-
-
-
-
-
 .hero {
       background: url(Image/aifut..png);
       background-size: cover;
       background-position: center;
-      height: 750px;
+      height: 500px;
       padding: 120px 40px;
       text-align: center;
       color: white;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+      @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
 
@@ -226,50 +233,154 @@ header nav a:hover {
   border-radius: 10px;
 }
 
-/* ----------------- APPLICATION CARDS ----------------- */
-.apps-section h2 {
-  font-size: 24px;
-  text-align: center;
-  margin-top: 40px;
-}
-.cards {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-.card {
-  border: 1px solid #e5e5e5;
-  padding: 20px;
-  border-radius: 10px;
-  background: #fafafa;
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.card h4 {
-  font-size: 15px;
-  font-weight: 600;
-}
-.card p {
-  font-size: 13px;
-  color: #555;
+
+/* FEATURES*/ 
+.features {
+    padding: 50px 50px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
 }
 
+.features h2 {
+    font-size: 32px;
+    
+}
+
+.subtext {
+    color: #b6b6b6;
+   
+}
+
+.features h4 {
+    color: #fff;
+    font-size: 16px;
+font-weight: 600;
+}
+.features p {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #bbbbbb;
+    
+}
+
+.feature-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+}
+
+.feature-card {
+    background: #1b1f27;
+    border-radius: 10px;
+   min-height: 160px;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #2c3240;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.app-img {
+width: 230px;
+height:150px;
+  object-fit: cover;
+margin-bottom: 10px;
+}
+
+
+  .footer {
+    background: #0f172a;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 20px 0;
+  }
+
+  .footer-section p{
+    width: 200px;
+  }
+
+  .footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 8px 0;
+  }
+
+  .footer-section ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    color: #3b82f6;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #3b82f6;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    font-size: 14px;
+    color: #94a3b8;
+  }
 
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo"><span style="background-color:#5579a2;border-radius: 30%;">⚙️</span> Generative AI</div>
+ <div class="logo">Nexa AI</div>
   <nav>
-    <a href="#what is ai">What is Generative AI</a>
-    <a href="#history">History</a>
+    <a href="#what is ai">About AI </a>
+    <a href="history.html">History</a>
     <a href="future.html">Future</a>
-    <a href="#Applications">Applications</a>
-    <a href="#">Contact</a>
+    <a href="features.html">Features</a>
+    <a href="#footer">Contact</a>
   </nav>
 </header>
 
@@ -279,8 +390,8 @@ header nav a:hover {
   <h1>Unlock the Power of<br>Generative AI</h1>
   <p>Discover the future of innovation and creativity. Explore how generative AI is transforming industries and creating new possibilities.</p>
   <div class="hero-buttons">
-    <a href="#Applications">Explore Applications</a>
-    <a href="#">Contact Us</a>
+    <a href="features.html">Explore Features</a>
+    
     </div>
   </div>
 </section>
@@ -359,20 +470,89 @@ It empowers anyone—from artists to engineers—to create high-quality content 
   <img src="Image/future.png" />
 </section>
 </div>
-<!-- APPLICATION CARDS -->
- <div id="Applications">
-<section class="section apps-section" id="apps">
-  <h2>Explore Applications</h2>
-  <div class="cards">
-    <div class="card"><h4>Image Synthesis</h4><p>Generate photorealistic images from text.</p></div>
-    <div class="card"><h4>Text Generation</h4><p>Create articles, emails, and content.</p></div>
-    <div class="card"><h4>Code Generation</h4><p>Write code, debug, and automate development.</p></div>
-    <div class="card"><h4>Music Composition</h4><p>Produce original melodies and compositions.</p></div>
-    <div class="card"><h4>Drug Discovery</h4><p>Accelerate molecular and medical research.</p></div>
-    <div class="card"><h4>Synthetic Data</h4><p>Generate anonymized training datasets.</p></div>
-  </div>
-</section>
-</div>
 
+
+<!--feature-->
+ <section class="features">
+        <h2>Explore the Future of Creation</h2>
+        <p style="color: #1b1f27" class="subtext ">Discover powerful tools designed to help you innovate faster and more effectively.</p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+              <img src="Image/smart write.png" class="app-img" alt="AI Image" />
+                <h4>Advanced Text Generation</h4>
+                <p>Instantly generate articles, marketing copy, and creative content for any purpose.</p>
+            </div>
+
+            <div class="feature-card">
+              <img src="Image/gen. code.png" class="app-img" alt="AI Image" />
+                <h4>Intelligent Code Completion</h4>
+                <p>Boost developer productivity with smart code suggestions in multiple languages.</p>
+            </div>
+
+            <div class="feature-card">
+              <img src="Image/img gen..png" class="app-img" alt="AI Image" />
+                <h4>AI-Powered Image Synthesis</h4>
+                <p>Create stunning visuals and artwork from text descriptions in seconds.</p>
+            </div>
+
+            <div class="feature-card">
+              <img src="Image/virtual sim..png" class="app-img" alt="AI Image" />
+                <h4>Data Analysis & Insights</h4>
+                <p>Effortlessly uncover valuable patterns from complex datasets using AI.</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- FOOTER -->
+ <div id="footer">
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-section">
+      <h3>GenAI Product</h3>
+      <p>Shaping the future of generative design and AI creativity.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="features.html">Features</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@genai.com">support@genai.com</a></li>
+        <li><a href="#">Live Chat</a></li>
+        <li><a href="#">Request a Demo</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+      </div>
+    </div>
+
+  </div>
+
+  
+</footer>
+     </div>
 </body>
 </html>

@@ -12,7 +12,7 @@
     * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
   font-family: "Inter", sans-serif;
 }
     body {
@@ -36,13 +36,19 @@
   z-index: 1000;
 }
 header .logo {
-  color: #5579a2;
+  color: #0a0a0a;
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 16px;
 }
+
+nav{
+margin-right: 120px;
+}
+
+
 header nav a {
   color: #fff;
   margin-left: 25px;
@@ -57,14 +63,20 @@ header nav a:hover {
 
     /* HERO */
     .hero {
-      /*background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80');*/
+      
       background: url(Image/futureai.png);
       background-size: cover;
       background-position: center;
-      height:550px;
+      height:310px;
       padding: 120px 40px;
       text-align: center;
       color: white;
+       animation: fadeIn 1.2s ease-in-out;
+    }
+
+      @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 .hero::before {
     content: '';
@@ -139,7 +151,7 @@ header nav a:hover {
       flex-wrap: wrap;
     }
     .card {
-      background: white;
+      background: #1b1f27;;
       width: 260px;
       padding: 30px 20px;
       border-radius: 12px;
@@ -161,11 +173,12 @@ header nav a:hover {
     .card-title {
       margin-top: 12px;
       font-weight: 600;
+      color: #fff;
     }
     .card p{
       margin-top: 6px;
       font-size: 12px;
-      color: #555;
+      color: #bbbbbb;
       line-height: 1.6;
     }
 
@@ -215,19 +228,127 @@ header nav a:hover {
       text-align: left;
     }
 
+
+    /* CTA */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background: #1b1f27;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 900px;
+     height: 200px;
+}
+
+.cta h2{
+    color: #fff;
+}
+
+.cta p {
+    max-width: 500px;
+    margin: 10px auto 25px;
+    color: #bbbbbb;
+}
+.btn-primary {
+    padding: 10px 18px;
+    background: #3d73ff;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white ;
+    text-decoration: none;
+}
     
+
+
+
+  .footer {
+    background: #0f172a;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 20px 0;
+  }
+
+  .footer-section p{
+    width: 200px;
+  }
+
+  .footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 8px 0;
+  }
+
+  .footer-section ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    color: #3b82f6;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #3b82f6;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+</style>
+
   </style>
 </head>
 <body>
 
   <header>
-  <div class="logo"><span style="background-color:#5579a2;border-radius: 30%;">⚙️</span> Generative AI</div>
+  <div class="logo">Nexa AI</div>
   <nav>
-    <a href="#what is ai">What is Generative AI</a>
-    <a href="#history">History</a>
-    <a href="#future">Future</a>
-    <a href="#Applications">Applications</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="features.html">Features</a>
+    <a href="#footer">Contact</a>
   </nav>
 </header>
 
@@ -297,7 +418,64 @@ header nav a:hover {
 
     </div>
   </section>
+ <!-- CTA SECTION -->
+    <section class="cta">
+        <h2>Ready to Build with Nexa?</h2>
+        <p>Join thousands of creators and developers pushing the boundaries of innovation.</p>
+        <a href="signup.html" class="btn-primary">Sign Up Now</a>
+    </section>
 
+
+    
+<!-- FOOTER -->
+ <div id="footer">
+  
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-section">
+      <h3>GenAI Product</h3>
+      <p>Shaping the future of generative design and AI creativity.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="features.html">Features</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@genai.com">support@genai.com</a></li>
+        <li><a href="#">Live Chat</a></li>
+        <li><a href="#">Request a Demo</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+      </div>
+    </div>
+
+  </div>
+
+  
+</footer>
      
+ </div>
 </body>
 </html>

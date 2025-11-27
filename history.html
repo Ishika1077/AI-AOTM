@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* light-grey */
+            color: #343a40; /* dark-grey-text */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       header {
+  width: 100%;
+  padding: 18px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+header .logo {
+  color: #5579a2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+nav{
+margin-right: 120px;
+}
+
+
+header nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+header nav a:hover {
+  opacity: 0.6;
+}
+
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background:url(Image/history\ ai.png);
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            padding: 80px 0 60px;
+            color:#fff;
+           animation: fadeIn 1.2s ease-in-out;
+        }
+
+         @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+
+    .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.485);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #fff; /* dark-blue */
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #fff; /* light-grey-text */
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline-label {
+            display: inline-block;
+            background-color: #007bff; /* primary-blue */
+            color: #ffffff; /* white */
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* History Grid */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-item h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #0a1128; /* dark-blue */
+            font-weight: 600;
+        }
+
+        .timeline-item p {
+            color: #6c757d; /* light-grey-text */
+            font-size: 1rem;
+        }
+
+        .timeline-item .image-container {
+            width: 100%;
+            height: 250px; /* Fixed height for consistency */
+            background-color: #e9ecef; /* medium-grey */
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .timeline-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .event-year {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #007bff; /* primary-blue */
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-year::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #007bff; /* primary-blue */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* CTA */
+.cta {
+    text-align: center;
+    padding: 40px 15px;
+    background: #1b1f27;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 900px;
+    height: 200px;
+}
+
+.cta h2{
+    color: #fff;
+}
+
+.cta p {
+    max-width: 500px;
+    margin: 10px auto 25px;
+    color: #bbbbbb;
+}
+.btn-primary {
+    padding: 10px 18px;
+    background: #3d73ff;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white ;
+    text-decoration: none;
+}
+
+
+  .footer {
+    background: #0f172a;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 20px 0;
+  }
+
+  .footer-section p{
+    width: 200px;
+  }
+
+  .footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 8px 0;
+  }
+
+  .footer-section ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    color: #3b82f6;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #3b82f6;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+
+    </style>
+</head>
+<body>
+    <header>
+ <div class="logo">Nexa AI</div>
+  <nav>
+    <a href="index.html">About AI </a>
+   
+    <a href="future.html">Future</a>
+    <a href="features.html">Features</a>
+    <a href="#footer">Contact</a>
+  </nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="timeline-label">A JOURNEY THROUGH TIME</span>
+                <h1>The History of AI</h1>
+                <p>From theoretical concepts to a global phenomenon, explore the pivotal moments that shaped the evolution of artificial intelligence.</p>
+            </div>
+        </section>
+
+        <section class="history-grid container">
+            <div class="timeline-item">
+                <span class="event-year">THE ORIGINS</span>
+                <h2>1940s: Foundations of Intelligence</h2>
+                <p>The intellectual roots of AI can be traced back to the 1940s. Pioneering thinkers like Alan Turing laid the philosophical groundwork for artificial intelligence. Concepts such as neural networks and early computing machines began to take shape, setting the stage for future advancements.</p>
+                <div class="image-container">
+                    <img src="Image/1940s.png" alt="Diagram of a neural network">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="event-year">THE EARLY PROMISE</span>
+                <h2>1950s: Early Promise and Optimism</h2>
+                <p>The term "Artificial Intelligence" was coined at the Dartmouth Workshop in 1956. This decade saw a surge in optimism, with researchers envisioning rapid progress in AI. Early programs like Logic Theorist and GPS demonstrated problem-solving capabilities, though limited.</p>
+                <div class="image-container">
+                    <img src="Image/1950s.png" alt="Portrait of a prominent AI pioneer like Alan Turing">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="event-year">THE AI WINTER</span>
+                <h2>1970s: The AI Winter</h2>
+                <p>A period of disillusionment and reduced funding, often referred to as the "AI Winter," followed the initial excitement. Researchers faced technical limitations and a lack of computational power, leading to a slowdown in progress and skepticism about AI's potential.</p>
+                <div class="image-container">
+                    <img src="Image/1970s.png" alt="Abstract lines and gradients representing a downturn">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="event-year">THE RESURGENCE</span>
+                <h2>1980s: Expert Systems Boom</h2>
+                <p>Expert systems, designed to mimic human experts in specific domains, gained popularity. These systems used rule-based reasoning to solve complex problems, finding applications in various industries. However, their limitations eventually led to another decline in interest.</p>
+                <div class="image-container">
+                    <img src="Image/1980s.png" alt="Diagram of expert system logic">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="event-year">THE REVOLUTION</span>
+                <h2>1990s: Rise of Machine Learning</h2>
+                <p>The 1990s marked a shift towards statistical and machine learning approaches. Algorithms like backpropagation gained prominence, allowing neural networks to learn from data more effectively. This laid the groundwork for modern AI breakthroughs and reignited the field.</p>
+                <div class="image-container">
+                    <img src="Image/1990s.png" alt="Abstract swirling data representing machine learning">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <span class="event-year">THE GENERATIVE EXPLOSION</span>
+                <h2>2010s: The Generative Explosion</h2>
+                <p>The introduction of the Transformer architecture and advancements in deep learning led to a generative AI explosion. This revolution enabled the creation of highly realistic images, text, and other media, ushering in a new era of AI capabilities and widespread adoption.</p>
+                <div class="image-container">
+                    <img src="Image/future.png" alt="Abstract generative art representing AI creation">
+                </div>
+            </div>
+            
+            </section>
+
+       <!-- CTA SECTION -->
+    <section class="cta">
+        <h2>Ready to Build with Nexa?</h2>
+        <p>Join thousands of creators and developers pushing the boundaries of innovation.</p>
+        <a href="signup.html" class="btn-primary">Sign Up Now</a>
+    </section>
+
+
+    
+<!-- FOOTER -->
+ <div id="footer">
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-section">
+      <h3>GenAI Product</h3>
+      <p>Shaping the future of generative design and AI creativity.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="features.html">Features</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@genai.com">support@genai.com</a></li>
+        <li><a href="#">Live Chat</a></li>
+        <li><a href="#">Request a Demo</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+      </div>
+    </div>
+
+  </div>
+
+  
+</footer>
+     </div>
+</body>
+</html>
+
